@@ -11,6 +11,7 @@ import orderRoutes from "./route/order.route.js"
 
 const app = express();
 
+
 app.use(cors({
   origin: "http://localhost:5173",
   credentials: true,
@@ -33,6 +34,22 @@ try {
     console.log("Error: ", error);
 }
 
+//Admin login 
+const ADMIN_PASSWORD = "admin123";
+
+app.post("/admin/login", (req, res) => {
+  const { password } = req.body;
+
+  if (!password) {
+    return res.status(400).json({ success: false, message: "Password is required" });
+  }
+
+  if (password === ADMIN_PASSWORD) {
+    return res.json({ success: true, message: "Admin login successful" });
+  } else {
+    return res.status(401).json({ success: false, message: "Wrong password" });
+  }
+});
 
 // defining routes
 app.use("/book", bookRoute);
