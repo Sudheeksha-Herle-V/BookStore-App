@@ -3,11 +3,12 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { Trash2, Plus, Minus } from "lucide-react";
-import BackButton from "../../../components/admin/BackButton"
+import BackButton from "../../../components/admin/BackButton";
+import LoadingSpinner from "../../../components/LoadingSpinner";
 
 function CartPage() {
   const [cart, setCart] = useState({ items: [] });
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   const user = JSON.parse(localStorage.getItem("Users"));
@@ -21,13 +22,11 @@ function CartPage() {
         const { data } = await axios.get(`http://localhost:4001/cart/${userId}`);
         setCart(data);
       } catch (err) {
-        toast.error("Failed to load cart")
-      }
-      finally {
+        toast.error("Failed to load cart");
+      } finally {
         setLoading(false);
       }
-
-    }
+    };
     cartFunction();
   }, [userId]);
 
@@ -57,28 +56,26 @@ function CartPage() {
     navigate("/checkout");
   };
 
-  // Safely calculate total
   const totalPrice = cart.items.reduce((sum, item) => {
     if (!item.bookId) return sum;
     return sum + item.bookId.price * item.quantity;
   }, 0);
 
-  return (
+   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-5xl mx-auto p-6">
 
         <div className="flex items-center justify-between mb-8">
           <BackButton />
-
           <h1 className="text-lg md:text-2xl font-bold text-pink-600 text-center flex-1">
             Your Cart
           </h1>
-
-          {/* Empty div to balance BackButton width */}
           <div className="w-8 md:w-10"></div>
         </div>
 
-        {cart.items.length === 0 ? (
+        {loading ? (
+          <LoadingSpinner />
+        ) : cart.items.length === 0 ? (
           <div className="text-center text-gray-500 text-lg">
             Your cart is empty.
             <br />
@@ -157,7 +154,6 @@ function CartPage() {
               })}
             </div>
 
-            {/* Summary & Checkout */}
             <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-200">
               <h3 className="text-base md:text-lg font-bold text-gray-800 mb-4">Order Summary</h3>
               <div className="flex justify-between text-gray-700 mb-2">

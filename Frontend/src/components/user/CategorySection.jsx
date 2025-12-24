@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Cards from "./Cards";
+import LoadingSpinner from "../LoadingSpinner";
 
 function CategorySection({ category, books, loading }) {
   const displayBooks = books.slice(0, 4);
@@ -20,9 +21,7 @@ function CategorySection({ category, books, loading }) {
       </div>
 
       {loading ? (
-        <p className="animate-pulse text-gray-400 text-center">
-          Loading books...
-        </p>
+        <LoadingSpinner/>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {displayBooks.length > 0 ? (

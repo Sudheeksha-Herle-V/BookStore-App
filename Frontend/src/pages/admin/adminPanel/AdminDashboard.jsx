@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Spinner from "../../../components/admin/Spinner";
+import LoadingSpinner from "../../../components/LoadingSpinner";
 import BooksTable from "../../../components/admin/books/BooksTable";
 import Sidebar from "../../../components/admin/Sidebar";
 import Header from "../../../components/admin/Header";
@@ -42,9 +42,7 @@ const AdminDashboard = () => {
 
         {/* Table View*/}
         {loading ? (
-          <div className="flex justify-center mt-20">
-            <Spinner />
-          </div>
+            <LoadingSpinner/>
         ) : (
           <BooksTable books={filteredBooks} />
         )}

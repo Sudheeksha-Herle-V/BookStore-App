@@ -6,6 +6,7 @@ import Cards from "../../components/user/Cards";
 import { IoSearchSharp } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
+import LoadingSpinner from "../../components/LoadingSpinner";
 
 function SearchPage() {
   const [query, setQuery] = useState("");
@@ -94,7 +95,7 @@ function SearchPage() {
         ) : (
           query.trim() && (
             <div className="text-center text-gray-500 mt-10 text-lg">
-              {loading ? "Loading..." : "No books found."}
+              {loading ? <LoadingSpinner/> : "No books found."}
             </div>
           )
         )}

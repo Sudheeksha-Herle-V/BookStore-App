@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import Spinner from "../../../components/admin/Spinner";
+import LoadingSpinner from "../../../components/LoadingSpinner";
 import BackButton from "../../../components/admin/BackButton";
 
 const ShowBook = () => {
@@ -28,9 +28,7 @@ const ShowBook = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen bg-gray-50">
-        <Spinner/>
-      </div>
+      <LoadingSpinner/>
     );
   }
 

@@ -4,6 +4,7 @@ import axios from "axios";
 import Cards from "../../components/user/Cards";
 import Navbar from "../../components/user/Navbar";
 import Footer from "../../components/user/Footer";
+import LoadingSpinner from "../../components/LoadingSpinner";
 
 /* URL slug → Backend category */
 const categoryMap = {
@@ -55,9 +56,7 @@ function CategoryPage() {
                 </div>
 
                 {loading ? (
-                    <p className="text-center text-gray-400 animate-pulse">
-                        Loading books...
-                    </p>
+                    <LoadingSpinner/>
                 ) : books.length > 0 ? (
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {books.map((book) => (

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Sidebar from "../../../components/admin/Sidebar";
 import Search from '../../../components/admin/Search';
 import Header from '../../../components/admin/Header';
-import Spinner from '../../../components/admin/Spinner';
+import LoadingSpinner from '../../../components/LoadingSpinner';
 import BooksTable from '../../../components/admin/books/BooksTable';
 import axios from 'axios';
 
@@ -39,9 +39,7 @@ const OutOfStock = () => {
         </div>
         {
           loading? (
-            <div>
-              <Spinner/>
-            </div>
+            <LoadingSpinner/>
           ):(
             <BooksTable books={filteredBooks}/>
           )
