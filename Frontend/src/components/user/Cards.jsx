@@ -1,10 +1,13 @@
 import React from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import Login from "../../pages/user/header/Login";
+import { Signup } from "../../pages/user/header";
 
 function Cards({ item }) {
   // Debug: see what item contains
   console.log("Rendering card:", item);
+
 
   const getUserId = () => {
     try {
@@ -18,7 +21,8 @@ function Cards({ item }) {
   const handleAddToCart = async () => {
     const userId = getUserId();
     if (!userId) {
-      toast.error("Please log in first");
+      const loginModal = document.getElementById("login_modal");
+      if (loginModal) loginModal.showModal();
       return;
     }
 

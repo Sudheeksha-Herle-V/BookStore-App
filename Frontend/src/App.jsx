@@ -24,10 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route
-          path="/books"
-          element={authUser ? <Book /> : <Navigate to="/signup" />}
-        />
+        <Route path="/books" element={<Book/>}/>
 
         {/* User Pages */}
         <Route path="/about" element={<About />} />
