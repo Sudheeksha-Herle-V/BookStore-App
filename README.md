@@ -43,6 +43,7 @@ Backend
 - CORS
 -------------------------
 Project Structure
+```
 bookStoreApp/
 ├── backend/
 │ ├── route/
@@ -61,7 +62,7 @@ bookStoreApp/
 │
 ├── package.json
 └── README.md
-
+```
 -------------------------
 Installation & Setup
 
