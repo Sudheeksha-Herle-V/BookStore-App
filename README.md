@@ -101,7 +101,7 @@ npm run dev
 
 #### 5. Admin authentication 
 ```
-It is handled via backend validation.
+It is handled via backend validation.  
 (Admin credentials are intentionally not exposed in README for security reasons.)
 ```
 
@@ -186,8 +186,8 @@ POST CHECKOUT
 
 
 ### AUTHOR
-**Sudheeksha Herle V**
-GitHub: *https://github.com/Sudheeksha-Herle-V*
+**Sudheeksha Herle V**  
+GitHub: *https://github.com/Sudheeksha-Herle-V*  
 LinkedIn: *https://linkedin.com/in/sudheeksha-herle-v*
 
 
