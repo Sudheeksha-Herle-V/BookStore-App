@@ -66,7 +66,6 @@ bookStoreApp/
 Installation & Setup
 
 1. Clone the repository
-```bash
 git clone http://github.com/Sudheeksha-Herle-V/BookStore-App/tree/main
 cd bookStoreApp
 
