@@ -161,9 +161,6 @@ App Screenshots
 ### About
 ![About](Screenshots/About.png)
 
-### Additional Screenshot
-![Screenshot-34](Screenshots/Screenshot-34.png)
-
 
 AUTHOR
 Sudheeksha Herle V
