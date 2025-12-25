@@ -1,7 +1,8 @@
 {
   "name": "bookstore",
   "version": "1.0.0",
-  "description": "mern project",
+  "description": "MERN Bookstore Backend API",
+  "author": "Sudheeksha Herle V",
   "main": "index.js",
   "type": "module",
   "scripts": {
