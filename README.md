@@ -126,43 +126,43 @@ POST CHECKOUT
 App Screenshots
 
 ### Home
-![Home](screenshots/Home.png)
+![Home](Screenshots/Home.png)
 
 ### Books
-![Books](screenshots/Books.png)
+![Books](Screenshots/Books.png)
 
 ### Cart
-![Cart](screenshots/Cart.png)
+![Cart](Screenshots/Cart.png)
 
 ### Checkout
-![Checkout](screenshots/Checkout.png)
+![Checkout](Screenshots/Checkout.png)
 
 ### Login
-![Login](screenshots/Login.png)
+![Login](Screenshots/Login.png)
 
 ### Sign-up
-![Sign-up](screenshots/Sign-up.png)
+![Sign-up](Screenshots/Sign-up.png)
 
 ### Contact
-![Contact](screenshots/Contact.png)
+![Contact](Screenshots/Contact.png)
 
 ### Admin Login
-![Admin-Login](screenshots/Admin-Login.png)
+![Admin-Login](Screenshots/Admin-Login.png)
 
 ### Admin Dashboard
-![Admin-Dashboard](screenshots/Admin-Dashboard.png)
+![Admin-Dashboard](Screenshots/Admin-Dashboard.png)
 
 ### Mobile Admin Dashboard
-![Mobile-Admin-Dashboard](screenshots/Mobile-Admin-Dashboard.png)
+![Mobile-Admin-Dashboard](Screenshots/Mobile-Admin-Dashboard.png)
 
 ### Search
-![Search](screenshots/Search.png)
+![Search](Screenshots/Search.png)
 
 ### About
-![About](screenshots/About.png)
+![About](Screenshots/About.png)
 
 ### Additional Screenshot
-![Screenshot-34](screenshots/Screenshot-34.png)
+![Screenshot-34](Screenshots/Screenshot-34.png)
 
 
 AUTHOR
