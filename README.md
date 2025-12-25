@@ -163,7 +163,6 @@ App Screenshots
 
 AUTHOR
 Sudheeksha Herle V
-MERN Stack Developer
 GitHub: https://github.com/Sudheeksha-Herle-V
 LinkedIn: https://linkedin.com/in/sudheeksha-herle-v
 
