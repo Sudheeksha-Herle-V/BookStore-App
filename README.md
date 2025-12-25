@@ -1,13 +1,17 @@
-MERN Bookstore Application
+# MERN Bookstore Application
 
-Quick Summary 
+## Quick Summary 
 A full-stack MERN Bookstore application featuring user authentication, book browsing, cart management, checkout flow, past orders, and an admin dashboard for managing books and orders. Built with React, Node.js, Express, and MongoDB following clean UI and RESTful API practices.
+
 -------------------------
-Project Overview
+
+## Project Overview
 This project is a complete online bookstore platform where users can explore books, add them to a cart, place orders, and track their order history. Admin users can manage books, view orders, and control order statuses. The application is designed with scalability and real-world e-commerce flow in mind.
+
 -------------------------
-Features
-User Features
+
+### Features
+#### User Features
 - User authentication (login & signup)
 - Browse books by category
 - Add / remove books from cart
@@ -16,17 +20,17 @@ User Features
 - View past orders
 - Responsive UI
 
-Admin Features
+#### Admin Features
 - Admin login
 - View all orders
 - Update order status (Pending → Shipped → Delivered)
 - Automatic stock reduction on delivery
 - Manage books inventory
+
 -------------------------
 
-Tech Stack
-
-Frontend
+### Tech Stack
+#### Frontend
 - React (Vite)
 - Redux Toolkit
 - React Router DOM
@@ -35,14 +39,16 @@ Frontend
 - React Hot Toast / Toastify
 - Lucide & React Icons
 
-Backend
+#### Backend
 - Node.js
 - Express.js
 - MongoDB & Mongoose
 - dotenv
 - CORS
+
 -------------------------
-Project Structure
+
+### Project Structure
 ```
 bookStoreApp/
 ├── backend/
@@ -64,106 +70,124 @@ bookStoreApp/
 └── README.md
 ```
 -------------------------
-Installation & Setup
 
-1. Clone the repository
-git clone http://github.com/Sudheeksha-Herle-V/BookStore-App/tree/main
+### Installation & Setup
+
+#### 1. Clone the repository
+```
+git clone http://github.com/Sudheeksha-Herle-V/BookStore-App.git
 cd bookStoreApp
+```
 
-2. Backend Setup
+#### 2. Backend Setup
+```
 cd backend
 npm install
 npm start
+```
 
-3. Create a .env file and add
+#### 3. Create a .env file and add
+```
 MongoDBURI=your_mongodb_connection_string
 PORT=4000
+```
 
-4. Frontend Setup
+#### 4. Frontend Setup
+```
 cd frontend
 npm install
 npm run dev
+```
 
-5. Admin authentication 
+#### 5. Admin authentication 
+```
 It is handled via backend validation.
 (Admin credentials are intentionally not exposed in README for security reasons.)
+```
 
-6. Future Improvements
+#### 6. Future Improvements
+
 •	Role-based authentication using JWT
 •	Payment gateway integration
 •	Wishlist feature
 •	Product reviews & ratings
 •	Improved admin analytics dashboard
 
-API is tested through POSTMAN
-Admin Endpoints
+-------------------------
+
+### API is tested through **POSTMAN**
+
+#### Admin Endpoints
 GET ADMIN LOGIN
 
-Books Endpoints
+#### Books Endpoints
 GET BOOK
 POST BOOK
 DELETE BOOK
 
-Contact Endpoints
+#### Contact Endpoints
 GET CONTACT
 DELETE CONTACT
 
-User Endpoints
+#### User Endpoints
 GET USER
 DELETE USER
 
-Cart Endpoints
+#### Cart Endpoints
 GET CART
 POST CART
 DELETE ITEM
 DELETE ALL
 
-Order Endpoints
+#### Order Endpoints
 GET ORDER
 GET ORDER ADMIN
 POST CHECKOUT
 
-App Screenshots
+------------------------
 
-### Home
+### App Screenshots
+
+#### Home
 ![Home](Screenshots/Home.png)
 
-### Books
+#### Books
 ![Books](Screenshots/Books.png)
 
-### Cart
+#### Cart
 ![Cart](Screenshots/Cart.png)
 
-### Checkout
+#### Checkout
 ![Checkout](Screenshots/Checkout.png)
 
-### Login
+#### Login
 ![Login](Screenshots/Login.png)
 
-### Sign-up
+#### Sign-up
 ![Sign-up](Screenshots/Sign-up.png)
 
-### Contact
+#### Contact
 ![Contact](Screenshots/Contact.png)
 
-### Admin Login
+#### Admin Login
 ![Admin-Login](Screenshots/Admin-Login.png)
 
-### Admin Dashboard
+#### Admin Dashboard
 ![Admin-Dashboard](Screenshots/Admin-Dashboard.png)
 
-### Mobile Admin Dashboard
+#### Mobile Admin Dashboard
 ![Mobile-Admin-Dashboard](Screenshots/Mobile-Admin-Dashboard.png)
 
-### Search
+#### Search
 ![Search](Screenshots/Search.png)
 
-### About
+#### About
 ![About](Screenshots/About.png)
 
 
-AUTHOR
-Sudheeksha Herle V
-GitHub: https://github.com/Sudheeksha-Herle-V
-LinkedIn: https://linkedin.com/in/sudheeksha-herle-v
+### AUTHOR
+**Sudheeksha Herle V**
+GitHub: *https://github.com/Sudheeksha-Herle-V*
+LinkedIn: *https://linkedin.com/in/sudheeksha-herle-v*
+
 
