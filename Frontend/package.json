@@ -30,7 +30,7 @@
     "sweetalert2": "^11.21.0"
   },
   "engines": {
-    "node": "18.x"
+    "node": "20.x"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",
