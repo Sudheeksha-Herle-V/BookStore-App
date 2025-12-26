@@ -26,7 +26,7 @@ function App() {
 
         <Route
           path="/books"
-          element={authUser ? <Book /> : <Navigate to="/signup" />}
+          element={<Book /> }
         />
 
         {/* User Pages */}
