@@ -17,7 +17,7 @@ function OrdersPage() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10 bg-gray-50 min-h-screen">
-      <h1 className="text-4xl font-bold text-pink-600 mb-12 text-center">Your Orders</h1>
+      <h1 className="text-lg sm:text-xl md:text-xl font-bold text-pink-600 mb-12 text-center">Your Orders</h1>
 
       {orders.length === 0 ? (
         <p className="text-center text-lg text-gray-500">You have no orders yet.</p>
@@ -26,13 +26,13 @@ function OrdersPage() {
           {orders.map((order, index) => (
             <div
               key={order._id}
-              className="bg-white border border-gray-200 p-6 rounded-2xl shadow-md transition-transform hover:scale-[1.01]"
+              className="bg-white border border-gray-200 p-2 rounded-2xl shadow-md transition-transform hover:scale-[1.01]"
             >
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-semibold text-gray-800">
+              <div className="flex justify-between items-center mb-2">
+                <h2 className="text-sm lg:text-base font-semibold text-gray-800">
                   Order #{index + 1}
                 </h2>
-                <span className="text-sm text-gray-500">
+                <span className="text-xs lg:text-sm text-gray-500">
                   {new Date(order.createdAt).toLocaleString()}
                 </span>
               </div>
@@ -41,19 +41,19 @@ function OrdersPage() {
                 {order.items.map((item, idx) => (
                   <li
                     key={idx}
-                    className="py-3 flex justify-between text-gray-700 text-base"
+                    className="py-2 flex justify-between text-gray-700 text-sm"
                   >
                     <span className="font-medium">
                       {item.bookId?.name || "Book"} × {item.quantity}
                     </span>
-                    <span className="text-gray-900 font-semibold">
+                    <span className="text-gray-900 text-xs lg:text-sm font-semibold">
                       ₹{item.bookId?.price * item.quantity}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-6 text-right text-lg font-bold text-pink-600">
+              <div className="mt-2 text-right text-sm lg:text-base font-bold text-pink-600">
                 Total: ₹{order.total}
               </div>
             </div>

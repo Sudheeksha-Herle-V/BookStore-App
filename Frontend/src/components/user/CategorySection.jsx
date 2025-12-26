@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
-import Cards from "./Cards";
-import LoadingSpinner from "../LoadingSpinner";
+import BooksGrid from "./BooksGrid";
 
-function CategorySection({ category, books, loading }) {
+function CategorySection({ category, books = [], loading }) {
+  // Limit to 4 books for preview
   const displayBooks = books.slice(0, 4);
+
   return (
-    <div className="mb-16">
+    <div className="mb-16 px-6">
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800">
+        <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800">
           {category.name}
         </h2>
 
@@ -20,21 +21,11 @@ function CategorySection({ category, books, loading }) {
         </Link>
       </div>
 
-      {loading ? (
-        <LoadingSpinner/>
-      ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {displayBooks.length > 0 ? (
-            displayBooks.map((item) => (
-              <Cards key={item._id} item={item} />
-            ))
-          ) : (
-            <p className="col-span-full text-center text-gray-500">
-              No books found in this category.
-            </p>
-          )}
-        </div>
-      )}
+      <BooksGrid
+        books={displayBooks}
+        loading={loading}
+        emptyMessage={`No books found in ${category.name}.`}
+      />
     </div>
   );
 }

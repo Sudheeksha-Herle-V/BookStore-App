@@ -78,7 +78,7 @@ function Navbar() {
 
   return (
     <div
-      className={`max-w-screen-2xl container mx-auto md:px-10  px-0 sm:px-4 bg-white text-black fixed top-0 left-0 right-0 z-50 ${sticky ? "shadow-md transition-all duration-300" : ""}`}
+      className={`max-w-screen-2xl container mx-auto md:px-10  px-2 sm:px-4 bg-white text-black fixed top-0 left-0 right-0 z-50 ${sticky ? "shadow-md transition-all duration-300" : ""}`}
     >
       <div className="navbar flex justify-between items-center py-0 md:py-3">
 
@@ -96,9 +96,9 @@ function Navbar() {
               hideTimeout = setTimeout(() => setShowMobileDropdown(false), 200);
             }}
           >
-            <button className="btn btn-ghost ">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 md:h-6 md:w-6 sm:h-4 sm:w-4 " fill="none"
-                viewBox="0 0 24 24" stroke="currentColor">
+            <button className="btn btn-ghost px-4 sm:px-8">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-6 md:w-6 " fill="none"
+                viewBox="0 0 20 20" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                   d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -121,7 +121,7 @@ function Navbar() {
           {/* DESKTOP NAV */}
           <div className="navbar-center hidden lg:flex"> <ul className="menu menu-horizontal space-x-2 text-md 2xl:text-xl">{navItems}</ul> </div>
 
-          <div className="flex items-center gap-4 sm:gap-5 md:gap-6 lg:gap-8">
+          <div className="flex items-center gap-3 sm:gap-4 sm:gap-5 md:gap-6 lg:gap-8">
             {/* SEARCH ICON */}
             <IoSearchSharp
               className="cursor-pointer text-black text-base sm:text-lg md:text-xl "
@@ -160,7 +160,7 @@ function Navbar() {
                 </button>
 
                 {showDropdown && (
-                  <div className="absolute mt-2 bg-white shadow-lg rounded-md text-sm text-black w-40 z-50 border p-2 right-0">
+                  <div className="absolute mt-2 bg-white shadow-lg rounded-md text-sm text-black w-40 z-50 border p-1 right-0">
                     <button
                       onClick={() => navigate("/orders")}
                       className="w-full flex items-center justify-start gap-2 px-4 py-2 hover:bg-pink-600 hover:text-white rounded-md"
@@ -180,7 +180,7 @@ function Navbar() {
             ) : (
               <div>
                 <a
-                  className="bg-pink-600 text-white px-3 py-2 rounded-md cursor-pointer"
+                  className="bg-pink-600 text-white px-2 py-1 sm:px-3 sm:py-2 text-xs sm:text-sm rounded-md cursor-pointer"
                   onClick={() => document.getElementById("login_modal").showModal()}
                 >
                   Login

@@ -1,34 +1,15 @@
-import { useEffect, useMemo, useState } from "react";
-import axios from "axios";
+import { useMemo } from "react";
 
 import categories from "../../../categories";
 import CategoryGrid from "../../../components/user/CategoryGrid";
 import CategorySection from "../../../components/user/CategorySection";
+import { useBooks } from "../../../hooks/useBooks";
 
 function Books() {
-  const [books, setBooks] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  /* Fetch Books */
-  useEffect(() => {
-    const fetchBooks = async () => {
-      try {
-        setLoading(true);
-        const res = await axios.get("https://bookstore-app-backend-tzhy.onrender.com/book");
-        setBooks(res.data);
-      } catch (err) {
-        console.error("Failed to fetch books:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchBooks();
-  }, []);
+  const { books, loading } = useBooks();
 
   /* Normalize category strings */
-  const normalizeCategory = (str = "") =>
-    str.trim().toLowerCase();
+  const normalizeCategory = (str = "") => str.trim().toLowerCase();
 
   /* Group books by normalized category */
   const booksByCategory = useMemo(() => {
@@ -42,22 +23,26 @@ function Books() {
   }, [books]);
 
   return (
-    <div className="max-w-screen-2xl mx-auto px-4 md:px-20 bg-white">
+    <div className="max-w-screen-2xl mx-auto px-4 md:px-20 bg-white p-8">
       {/* Heading */}
-      <div className="pt-20 md:pt-28 text-center">
+      <div className="pt-12 md:pt-20 text-center">
         <h1 className="font-bold text-gray-800 tracking-tight text-base sm:text-lg md:text-xl">
           Discover Your Next Favorite Book
         </h1>
       </div>
 
       {/* Category Grid */}
-      <CategoryGrid categories={categories} />
+      <div className="mt-8 sm:mt-12 ">
+        <CategoryGrid categories={categories} />
+      </div>
 
       <div className="border-b mt-6 mb-14" />
 
       {/* Category Sections */}
       {categories.map((cat) => {
-        const displayBooks = booksByCategory[normalizeCategory(cat.backendCategory)]?.slice(0, 4) || [];
+        const displayBooks =
+          booksByCategory[normalizeCategory(cat.backendCategory)]?.slice(0, 4) ||
+          [];
 
         return (
           <CategorySection
