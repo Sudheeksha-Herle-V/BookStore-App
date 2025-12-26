@@ -35,10 +35,10 @@ function AdminOrdersPage({ type = "Pending" }) {
   return (
     <div className="flex pt-8">
       <Sidebar />
-      <div className="ml-2 lg:ml-64 w-full px-6 py-10 bg-gray-50 min-h-screen">
+      <div className="ml-2 lg:ml-64 w-full px-6 py-4 bg-gray-50 min-h-screen">
         <div className="grid grid-cols-[20%_80%] sm:grid-cols-[10%_90%] lg:grid-cols-1 justify-center items-center mb-10 ">
           <Header />
-          <h1 className="text-xl sm:text-3xl lg:text-3xl font-bold text-pink-600 text-center ">{type} Orders</h1>
+          <h1 className="text-lg sm:text-xl lg:text-xl font-bold text-pink-600 text-center ">{type} Orders</h1>
         </div>
 
         {orders.length === 0 ? (
