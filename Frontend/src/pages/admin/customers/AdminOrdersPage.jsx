@@ -15,19 +15,19 @@ function AdminOrdersPage({ type = "Pending" }) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4001/orders/admin/orders/${endpointMap[type]}`)
+      .get(`https://bookstore-app-backend-tzhy.onrender.com/orders/admin/orders/${endpointMap[type]}`)
       .then((res) => setOrders(res.data))
       .catch((err) => toast.error("Failed to load orders"));
   }, [type]);
 
   const markShipped = async (id) => {
-    await axios.put(`http://localhost:4001/orders/admin/orders/${id}/mark-shipped`);
+    await axios.put(`https://bookstore-app-backend-tzhy.onrender.com/orders/admin/orders/${id}/mark-shipped`);
     toast.success("Marked as Shipped");
     setOrders(orders.filter(order => order._id !== id));
   };
 
   const markDelivered = async (id) => {
-    await axios.put(`http://localhost:4001/orders/admin/orders/${id}/mark-delivered`);
+    await axios.put(`https://bookstore-app-backend-tzhy.onrender.com/orders/admin/orders/${id}/mark-delivered`);
     toast.success("Marked as Delivered");
     setOrders(orders.filter(order => order._id !== id));
   };

@@ -14,7 +14,7 @@ const AdminMessages = () => {
   const fetchMessages = () => {
     setLoading(true);
     axios
-      .get('http://localhost:4001/contact')
+      .get('https://bookstore-app-backend-tzhy.onrender.com/contact')
       .then((res) => setMessages(res.data))
       .catch((err) => console.error('Error fetching messages:', err))
       .finally(() => setLoading(false));
@@ -23,7 +23,7 @@ const AdminMessages = () => {
   const handleDelete = (id) => {
     if (window.confirm('Are you sure you want to delete this message?')) {
       axios
-        .delete(`http://localhost:4001/contact/${id}`)
+        .delete(`https://bookstore-app-backend-tzhy.onrender.com/contact/${id}`)
         .then(() => fetchMessages())
         .catch((err) => console.error('Error deleting message:', err));
     }

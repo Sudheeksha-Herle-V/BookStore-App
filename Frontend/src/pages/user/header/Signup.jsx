@@ -24,7 +24,7 @@ function Signup() {
 
     try {
       const res = await axios.post(
-        "http://localhost:4001/user/signup",
+        "https://bookstore-app-backend-tzhy.onrender.com/user/signup",
         userInfo
       );
 

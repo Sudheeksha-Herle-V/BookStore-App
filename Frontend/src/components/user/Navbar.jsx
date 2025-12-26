@@ -29,7 +29,7 @@ function Navbar() {
     const userId = user?._id;
     if (!userId) return;
 
-    fetch(`http://localhost:4001/cart/${userId}`)
+    fetch(`https://bookstore-app-backend-tzhy.onrender.com/cart/${userId}`)
       .then((res) => res.json())
       .then((data) => {
         if (!data.items) return setCartCount(0);

@@ -19,7 +19,7 @@ function CartPage() {
       if (!userId) return;
       try {
         setLoading(true);
-        const { data } = await axios.get(`http://localhost:4001/cart/${userId}`);
+        const { data } = await axios.get(`https://bookstore-app-backend-tzhy.onrender.com/cart/${userId}`);
         setCart(data);
       } catch (err) {
         toast.error("Failed to load cart");
@@ -32,7 +32,7 @@ function CartPage() {
 
   const removeItem = async (bookId) => {
     try {
-      const res = await axios.delete(`http://localhost:4001/cart/${userId}/${bookId}`);
+      const res = await axios.delete(`https://bookstore-app-backend-tzhy.onrender.com/cart/${userId}/${bookId}`);
       setCart(res.data);
       toast.success("Item removed");
     } catch (err) {
@@ -42,7 +42,7 @@ function CartPage() {
 
   const updateQuantity = async (bookId, action) => {
     try {
-      const res = await axios.put(`http://localhost:4001/cart/${userId}`, {
+      const res = await axios.put(`https://bookstore-app-backend-tzhy.onrender.com/cart/${userId}`, {
         bookId,
         action,
       });

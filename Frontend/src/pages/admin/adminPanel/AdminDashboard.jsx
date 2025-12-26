@@ -15,7 +15,7 @@ const AdminDashboard = () => {
     const fetchBooks = async () => {
       try {
         setLoading(true);
-        const { data } = await axios.get("http://localhost:4001/book");
+        const { data } = await axios.get("https://bookstore-app-backend-tzhy.onrender.com/book");
         setBooks(data);
         setFilteredBooks(data); // initially show all books
       } catch (err) {

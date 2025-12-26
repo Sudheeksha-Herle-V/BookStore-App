@@ -20,7 +20,7 @@ function CheckoutPage() {
   useEffect(() => {
     if (!userId) return;
     axios
-      .get(`http://localhost:4001/cart/${userId}`)
+      .get(`https://bookstore-app-backend-tzhy.onrender.com/cart/${userId}`)
       .then((res) => setCart(res.data))
       .catch(() => toast.error("Failed to load cart"));
   }, [userId]);
@@ -68,7 +68,7 @@ function CheckoutPage() {
 
     try {
       await axios.post(
-        `http://localhost:4001/checkout/${userId}`,
+        `https://bookstore-app-backend-tzhy.onrender.com/checkout/${userId}`,
         { ...customer, total: totalPrice }
       );
 

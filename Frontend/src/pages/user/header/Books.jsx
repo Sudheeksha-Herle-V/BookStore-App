@@ -14,7 +14,7 @@ function Books() {
     const fetchBooks = async () => {
       try {
         setLoading(true);
-        const res = await axios.get("http://localhost:4001/book");
+        const res = await axios.get("https://bookstore-app-backend-tzhy.onrender.com/book");
         setBooks(res.data);
       } catch (err) {
         console.error("Failed to fetch books:", err);

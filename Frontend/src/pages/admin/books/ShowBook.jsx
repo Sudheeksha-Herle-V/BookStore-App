@@ -13,7 +13,7 @@ const ShowBook = () => {
     const fetchbook= async ()=>{
       try{
         setLoading(true);
-        const {data}=await axios.get(`http://localhost:4001/book/${id}`);
+        const {data}=await axios.get(`https://bookstore-app-backend-tzhy.onrender.com/book/${id}`);
         setBook(data);
       }
       catch(err){

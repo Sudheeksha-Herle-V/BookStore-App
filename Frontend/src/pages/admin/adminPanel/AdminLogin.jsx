@@ -13,7 +13,7 @@ const AdminLogin = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:4001/admin/login", { password });
+      const res = await axios.post("https://bookstore-app-backend-tzhy.onrender.com/admin/login", { password });
 
       if (res.data.success) {
         toast.success(res.data.message || "Admin login successful");

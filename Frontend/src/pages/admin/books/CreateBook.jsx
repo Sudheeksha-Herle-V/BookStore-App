@@ -38,7 +38,7 @@ const CreateBook = () => {
 
     try {
       setLoading(true);
-      await axios.post("http://localhost:4001/book", data);
+      await axios.post("https://bookstore-app-backend-tzhy.onrender.com/book", data);
       enqueueSnackbar("Book Created Successfully", { variant: "success" });
       navigate("/admin");
     } catch (error) {

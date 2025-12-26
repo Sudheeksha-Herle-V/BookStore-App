@@ -28,7 +28,7 @@ const AdminUsers = () => {
   const fetchUsers = () => {
     setLoading(true);
     axios
-      .get('http://localhost:4001/user')
+      .get('https://bookstore-app-backend-tzhy.onrender.com/user')
       .then((res) => {
         setUsers(res.data);
         setFilteredUsers(res.data);
@@ -43,7 +43,7 @@ const AdminUsers = () => {
   const deleteUser = (id) => {
     if (!window.confirm('Are you sure you want to delete this user?')) return;
     axios
-      .delete(`http://localhost:4001/user/${id}`)
+      .delete(`https://bookstore-app-backend-tzhy.onrender.com/user/${id}`)
       .then(() => {
         enqueueSnackbar('User deleted successfully', { variant: 'success' });
         fetchUsers();

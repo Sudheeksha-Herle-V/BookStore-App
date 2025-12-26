@@ -24,7 +24,7 @@ function Cards({ item }) {
 
     try {
       await axios.post(
-        "http://localhost:4001/cart",
+        "https://bookstore-app-backend-tzhy.onrender.com/cart",
         {
           userId,
           bookId: item._id,

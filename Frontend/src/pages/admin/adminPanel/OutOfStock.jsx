@@ -15,7 +15,7 @@ const OutOfStock = () => {
     const fetchBooks=async ()=>{
       try{
         setLoading(true);
-        const {data} = await axios.get("http://localhost:4001/book");
+        const {data} = await axios.get("https://bookstore-app-backend-tzhy.onrender.com/book");
         const filtereddata=data.filter(book=>book.outOfStock===true);
         setBooks(filtereddata);
         setFilteredBooks(filtereddata);

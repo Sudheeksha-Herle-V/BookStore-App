@@ -28,7 +28,7 @@ const EditBook = () => {
     const fetchBook = async () => {
       try {
         setLoading(true);
-        const res = await axios.get(`http://localhost:4001/book/${id}`);
+        const res = await axios.get(`https://bookstore-app-backend-tzhy.onrender.com/book/${id}`);
         setForm(res.data);
       } catch (err) {
         enqueueSnackbar("Error fetching book data", { variant: "error" });
@@ -44,7 +44,7 @@ const EditBook = () => {
   const handleEditBook = async () => {
     try {
       setLoading(true);
-      await axios.put(`http://localhost:4001/book/${id}`, {
+      await axios.put(`https://bookstore-app-backend-tzhy.onrender.com/book/${id}`, {
         ...form,
         price: Number(form.price),
         count: Number(form.count),
